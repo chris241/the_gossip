@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 2019_08_06_075126) do
   create_table "gossips", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_gossips_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -67,8 +69,10 @@ ActiveRecord::Schema.define(version: 2019_08_06_075126) do
     t.text "description"
     t.string "email"
     t.integer "age"
+    t.bigint "city_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_users_on_city_id"
   end
 
 end

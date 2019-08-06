@@ -29,7 +29,7 @@ puts '-> Je charge un jeu d\'essai User'
    description: Faker::Lorem.sentence,
    email: Faker::Internet.email,
    age: Faker::Number.between(from:7, to: 77),
-  # city_id: City.all.sample.id
+  city_id: City.all.sample.id
  )
 end
 puts '-> Je charge un jeu d\'essai Gossip'
@@ -37,7 +37,7 @@ puts '-> Je charge un jeu d\'essai Gossip'
  Gossip.create!(
    title: Faker::Lorem.sentence,
    content: Faker::Lorem.paragraph,
-   #user_id: User.all.sample.id
+   user_id: User.all.sample.id
  )
 end
 puts '-> Je charge un jeu d\'essai Tag'
