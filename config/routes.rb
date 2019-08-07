@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get '/team', to: 'gossips#team'
   get '/contact', to: 'gossips#contact'
   root to:'gossips#home'
-  get '/gossips/show/:id', to: 'gossips#show'
   resources :gossips
   resources :users
 end

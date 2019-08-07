@@ -2,12 +2,13 @@
 
 <div class="card text-center">
 <div class="card">
-  <h5 class="card-header"><%= @user.first_name%></h5>
+  <h5 class="card-header">Prénom :<%= @user.first_name%></h5>
   <div class="card-body">
-    <h5 class="card-title"><%= @user.last_name%></h5>
-    <p class="card-text"><%= @user.email%></p>
-    <p class="card-text"><%= @user.age%></p>
+	<h5 class="card-title">Nom :<%= @user.last_name%></h5>
+    <p class="card-text">E-mail :<%= @user.email%></p>
+    <p class="card-text">Age : <%= @user.age%> ans </p>
     <p class="card-text"><%= @user.description%></p>
+    <p class="card-text">Ville :<%= @user.city.name%></p>
     <a href="/" class="btn btn-primary">Retour aux potins</a>
   </div>
 </div>
