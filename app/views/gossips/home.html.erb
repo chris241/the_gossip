@@ -1,14 +1,13 @@
 <h1>LES POTINS</h1>
-<div class="card text-center">
-	<div class="card-body">
-  	<h3 class="display-4"><%=@gossip.each_with_index do |gossip, index|%><%=gossip.title%></h3>
-  	
-  		<p class="lead"><%=gossip.user.first_name%> </p><br>
-  		<a class="btn btn-primary btn-lg" href="/gossips/show/<%=index+1%>" role="button">show</a><br>
- 		<%end%>
- 	</div>
+<div class="card">
+	<div class="card text-center">
+    <h3 class="display-4"><%=@gossips.each_with_index do |gossip, index|%><%=gossip.title%></h3>  
+		<div class="card-body">
+  			
+  			<p class="lead"><%=gossip.user.first_name%></p>
+  			<a class="btn btn-primary btn-lg" href="<%= gossip_path(gossip.id)%>" role="button">Afficher</a><br><br>
+			<%end%><br>
+ 		</div>
+	</div>
 </div>
-<a href= "<%= new_gossip_path %>"class="btn btn-success">Créer un potin</a>
-
-
-
+<a href= "<%= new_gossip_path%>"class="btn btn-success">Créer un potin</a><br>

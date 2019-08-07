@@ -1,0 +1,13 @@
+<ul class="list-group list-group-flush">
+	<%= @user.each_with_index do |u| %>
+  <li class="list-group-item"><%=u.first_name%></li>
+  <li class="list-group-item"><%=u.age%> ans</li>
+</ul>
+  <a href="<%=user_path(u.id)%>" class="btn btn-primary">Afficher l'auteur</a>
+<%end%>
+
+
+
+
+
+  

@@ -1,10 +1,11 @@
+<!--Afficher les gossips et les auteurs qui sont associés-->
 <div class="card text-center">
-<div class="card">
-  <h5 class="card-header"><%= @gossip.user.first_name%></h5>
-  <div class="card-body">
-    <h5 class="card-title"><%= @gossip.title%></h5>
-    <p class="card-text"><%= @gossip.content%></p>
-    <a href="#" class="btn btn-primary">Afficher author</a>
-  </div>
-</div>
+	<div class="card">
+  		<div class="card-body">
+  			<h5 class="card-header"></h5>
+    		<h6 class="card-title"><%= @gossip.title%></h6>
+    		<p class="card-text"><%= @gossip.content%></p>
+    		<a href="<%=user_path(@gossip.user.id)%>" class="btn btn-primary">Afficher l'auteur </a>
+  		</div>
+	</div>
 </div>
