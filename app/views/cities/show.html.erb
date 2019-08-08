@@ -1,0 +1,13 @@
+<div class="card text-center">
+ <div class="card-header">
+   <%= @city.name%>
+ </div>
+ <div class="card-body">
+   <% @city.users.each do |user|%>
+   <h5 class="card-title"><strong>The author who create the gossip is :</strong> <%= user.first_name %></h5>
+     <% user.gossips.each do |gossip|%>
+       <h5 class="card-title"><strong><%= gossip.title %></strong> </h5>
+     <%end%>  
+     <%end%>
+ </div>
+</div
