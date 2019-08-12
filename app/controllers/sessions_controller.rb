@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	@user = User.find_by_email(params[:email])
-  	if @user && @user.authenticate(params[:password])
-  		session[:user_id] = @user.id
+  	user = User.find_by_email(params[:email])
+  	if user.authenticate(password[:password])
+  		cookies[:id] = user.id
   		redirect_to root_path
   	else
   		flash.now.alert = "invalide your password or your email"
@@ -14,4 +14,7 @@ class SessionsController < ApplicationController
   	end
   	
   end
+ def destroy
+ 	cookies.delete(params[:last_name])
+ end
 end
