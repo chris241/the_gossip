@@ -1,0 +1,13 @@
+<h1>Comments#create</h1>
+<p>Find me in app/views/comments/create.html.erb</p>
+  <h1>Editer un point</h1>
+  <%= form_for @comment do |f|%>
+<div class="form-group">
+      <%= f.label'Content :' %>
+      <%= f.text_area'content', class:'form-control'%>
+      <br /> <br />
+
+      <%= f.submit "Valider", class:"btn btn-primary"%>
+      
+</div>
+<% end %>

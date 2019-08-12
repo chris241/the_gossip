@@ -1,7 +1,6 @@
 class  GossipsController < ApplicationController
 	def home
 		 @gossips= Gossip.all
-     @user = User.all
 	end
 	 def index
     # Méthode qui récupère tous les potins et les envoie à la view index (index.html.erb) pour affichage
@@ -19,12 +18,12 @@ class  GossipsController < ApplicationController
   	end
 
   	def create
-      gossip_params =params.permit(:title, :content)
+       gossip_params =params.permit(:title, :content)
        gossip = Gossip.create(gossip_params)
     # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
     # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
     # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
-    redirect_to '/'
+    redirect_to root_path
   	end
 
   	def edit

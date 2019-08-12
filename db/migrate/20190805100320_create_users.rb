@@ -7,8 +7,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.integer :age
       t.belongs_to :city, index: true
-      
       t.timestamps
+
     end
   end
 end
